@@ -1,0 +1,198 @@
+.promo {
+    &--inner {
+        .promo__header {
+            min-height: 160px;
+        }
+        .promo__image {
+            width: 229px;
+            height: 39px;
+            background-image: url("../img/text-sedona.svg");
+        }
+        .promo__info {
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e5e5e5;
+                &::before {
+                    display: none;
+                }
+        }
+    }
+}
+
+.promo__header {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 389px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: @bg-blue;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+       &::before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-image: url("../img/bg-triangle-mobile.svg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+        }
+       
+}
+
+@media (min-resolution: @retina-dpi),
+       (min-resolution: @retina-dppx) {
+            .promo__header {
+               background-image: url("../img/bg-back-mobile@2x.jpg");
+            }
+}
+
+.promo__image {
+    width: 282px;
+    height: 214px;
+    margin: 0 auto;
+    
+    background-image: url("../img/text-sedona-index.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.promo__info {
+     width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 40px 10px 20px 10px;
+       &::before {
+            position: absolute;
+            content: "";
+            height: 30px;
+            right: 0;
+            left: 0;
+            bottom: -30px;
+            background-image: url("../img/bg-triangle.svg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+       }
+}
+
+.promo__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    font-family: "PT_Sans", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.promo__text {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+    .promo {
+        &--inner {
+           .promo__header {
+                min-height: 290px;
+            }
+            .promo__image {
+                width: 458px;
+                height: 78px;
+            }
+            .promo__info {
+                padding-bottom: 72px;
+                border-bottom: none;
+            }
+        }
+    }   
+    
+        
+
+    .promo__header {
+        min-height: 518px;
+        // padding-top: 78px;
+        background-image: url(../img/bg-back-tablet@1x.jpg);
+           &::before {
+               background-image: url("../img/bg-triangle-tablet.svg");
+               height: 57px;
+           }
+    }
+
+    @media (min-resolution: @retina-dpi),
+           (min-resolution: @retina-dppx) {
+               .promo__header {
+                    background-image: url("../img/bg-back-tablet@2x.jpg");
+              
+                }
+    }
+
+    .promo__image {
+        width: 460px;
+        height: 350px;
+    }
+
+    .promo__info {
+        padding: 46px 130px 50px 130px;
+            &::before {
+                display: none;
+       } 
+    }
+
+    .promo__title  {
+        font-size: 21px;
+    } 
+}
+
+
+@media (min-width: @desktop-width) {
+    .promo {
+        &--inner {
+           .promo__header {
+                min-height: 300px;
+            }
+            .promo__image {
+                width: 461px;
+                height: 80px;
+            }
+        }   
+    }
+
+    .promo__header {
+        background-image: url("../img/bg-back-desktop@1x.jpg");
+           &::before {
+               background-image: url("../img/bg-triangle-desktop.svg");
+               height: 57px;
+           }
+    }
+
+    @media (min-resolution: @retina-dpi),
+           (min-resolution: @retina-dppx) {
+            .promo__header {
+               background-image: url("../img/bg-back-desktop@2x.jpg");
+            }
+    }
+
+    .promo__info {
+        padding-left: 320px;
+        padding-right: 320px;
+    }
+
+    
+}
