@@ -1,0 +1,73 @@
+.form-attractions {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 42px;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+        &__title {
+            .fieldset-title();
+            margin-bottom: 35px;
+        }
+        &__list {
+           .reset-list();
+        }
+        &__item {
+           padding-left: 80px;
+           margin-bottom: 58px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+        }
+        &__input {
+            display: none;
+        }
+        &__label {
+            position: relative;
+            display: block;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 700;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 58px;
+                    height: 58px;
+                    top: -13px;
+                    left: -80px;
+                    border-radius: 10px;
+                    background-color: #f2f2f2;
+                }
+                &::after {
+                    display: none;
+                    position: absolute;
+                    content: "";
+                    width: 25px;
+                    height: 20px;
+                    top: 8px;
+                    left: -65px;
+                    background-image: url("../img/icon-tick.svg");
+                    background-repeat: no-repeat;
+                    background-size: auto;
+                    background-position: center;
+                    
+                }
+                &:hover {
+                    &::before {
+                        background-color: #e5e5e5;
+                    }
+                }
+                &:active {
+                    &::after {
+                        background-color: #a4a4a4;
+                    }
+                }
+        }
+}
+
+#devil:checked ~ .form-attractions__label::after,
+#mountain:checked ~ .form-attractions__label::after,
+#park:checked ~ .form-attractions__label::after,
+#rock:checked ~ .form-attractions__label::after {
+    display: block;
+}
